@@ -5,11 +5,6 @@ pipeline {
     }
     
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Alt-F2/lbg-hello-world-maven.git'
-            }
-        }
         stage('Compile') {
             steps {
                 sh 'mvn clean compile'
